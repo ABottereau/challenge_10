@@ -1,0 +1,39 @@
+.title {
+    display: flex;
+    justify-content: center;
+}
+.nav {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: #1D77CA;
+
+    .nav-item-container {
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        z-index: 50;
+        width: 400px;
+
+        .nav-item {
+            height: 50px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            font-weight: lighter;
+            color: #FFFFFF;
+            text-decoration: none;
+            z-index: 100;
+            height: fit-content;
+        }
+
+        .nav-item:hover {
+            background-color: #2289E9;
+        }
+    }
+}
