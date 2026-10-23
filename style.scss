@@ -37,3 +37,45 @@
         }
     }
 }
+article {
+    width: 80%;
+    height: 23em;
+    margin-left: 10%;
+    margin-bottom: 5px;
+    border: 1px solid;
+    border-color: black;
+}
+.ref-prod {
+    text-align: center;
+    align-items: center;
+    height: 10%;
+    border: 1px solid;
+    border-color: black;
+}
+.contenu {
+    border: 1px solid;
+    border-color: black;
+    flex-flow: row;
+    height: 90%;
+}
+.description {
+    border: 1px solid;
+    border-color: black;
+    width: 60%;
+    background-color: beige;
+    float: right;
+    height: 85%;
+    padding-top: 2em;
+    padding-left: 2em;
+}
+.image {
+    width: 35%;
+    float: left;
+    text-align: center;
+}
+h2 {
+    margin: 0px;
+}
+img {
+    height: 20em;
+}
