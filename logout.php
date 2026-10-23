@@ -9,5 +9,6 @@ if (!empty($_SESSION['userName'])) {
 
 if (isset($_POST['logoutButton'])) {
     unset($_SESSION['userName']);
+    unset($_SESSION['cart']);
     header('Location: index.php');
 }

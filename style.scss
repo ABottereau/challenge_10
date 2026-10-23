@@ -19,7 +19,7 @@
         padding: 0;
         margin: 0;
         z-index: 50;
-        width: 400px;
+        width: 600px;
 
         .nav-item {
             height: 50px;
@@ -30,8 +30,19 @@
             text-decoration: none;
             z-index: 100;
             height: fit-content;
+            margin-right: 5px;
         }
 
+        #navHello { 
+            height: 50px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12px;
+            font-weight: lighter;
+            color: #FFFFFF;
+            text-decoration: none;
+            z-index: 100;
+            height: fit-content;
+        }
         .nav-item:hover {
             background-color: #2289E9;
         }

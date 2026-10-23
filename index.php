@@ -1,29 +1,20 @@
 <?php
 session_start();
-setcookie('cart');
-include 'index.html';
-var_dump($_SESSION);
-
-
-if (!empty($_SESSION['userName'])) {
-    if (isset($_POST['addEragon'])) {
-        $_COOKIE = ['Eragon' => [
-            'title' => 'Eragon',
-            'price' => 20]];
-    }
-        if (isset($_POST['addAine'])) {
-        $_COOKIE = ['Aine' => [
-            'title' => "L'ainé",
-            'price' => 20]];
-    }
-    if (isset($_POST['addBrisingr'])) {
-        $_COOKIE = ['Brisingr' => [
-            'title' => 'Brisingr',
-            'price' => 20]];
-    }
-    if (isset($_POST['addHeritage'])) {
-        $_COOKIE = ['Heritage' => [
-            'title' => "L'héritage",
-            'price' => 20]];
-    }
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
 }
+
+$options = ['options' => ['min_range' => 0]];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (filter_var($_POST['quantity'], FILTER_VALIDATE_INT, $options)) {
+        $_SESSION['cart'][] = [
+            'title' => $_POST['bookName'],
+            'price' => $_POST['price'],
+            'quantity' => $_POST['quantity']
+        ];
+        header('Location: cart.php');
+    }    
+}
+
+include 'index.html.php';
