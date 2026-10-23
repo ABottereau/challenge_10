@@ -30,8 +30,8 @@ echo "<!DOCTYPE html>
                     echo "</a>
                 </ul>
             </nav>
-    </header>
-    <main>
+    </header>";
+    echo "<main>
         <article>
             <div class=\"ref-prod\">
                 <h2>Eragon</h2>
@@ -124,6 +124,6 @@ echo "<!DOCTYPE html>
                 </div>
             </div>
         </article>
-    </main>
-</body>
+    </main>";
+echo "</body>
 </html>";
